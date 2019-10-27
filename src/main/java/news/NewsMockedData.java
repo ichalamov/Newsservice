@@ -66,12 +66,13 @@ public class NewsMockedData {
     }
 
     // edit news article
-    public News editNewsArticle(int id, String title, String content) {
+    public News editNewsArticle(int id, String title, String content, String linkToPicture) {
         for (News n : news) {
             if (n.getId() == id) {
-                int blogIndex = news.indexOf(n);
+        //      int newsArticleIndex = news.indexOf(n);
                 n.setTitle(title);
                 n.setText(content);
+                n.setLinkToPicture(linkToPicture);
                 return n;
             }
 

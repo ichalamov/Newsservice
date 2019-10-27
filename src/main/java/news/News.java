@@ -24,6 +24,7 @@ public class News {
     public int getId() {
         return id;
     }
+
     public String getText() {
         return text;
     }
