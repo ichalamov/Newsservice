@@ -1,5 +1,6 @@
 package news;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -10,16 +11,18 @@ public class News {
     private String text;
     private Date creationDate;
     private String linkToPicture;
-    private Date validFrom;
-    private Date validTo;
+    private LocalDate validFrom;
+    private LocalDate validTo;
     private List<Integer> readStatus;
 
-    public News(int id, String title, String text, Date creationDate, String linkToPicture, List<Integer> readStatus) {
+    public News(int id, String title, String text, Date creationDate, String linkToPicture, LocalDate validFrom, LocalDate validTo, List<Integer> readStatus) {
         this.id = id;
         this.title = title;
         this.text = text;
         this.creationDate = creationDate;
         this.linkToPicture = linkToPicture;
+        this.validFrom = validFrom;
+        this.validTo = validTo;
         this.readStatus = readStatus;
     }
 
@@ -63,19 +66,19 @@ public class News {
         this.id = id;
     }
 
-    public Date getValidFrom() {
+    public LocalDate getValidFrom() {
         return validFrom;
     }
 
-    public void setValidFrom(Date validFrom) {
+    public void setValidFrom(LocalDate validFrom) {
         this.validFrom = validFrom;
     }
 
-    public Date getValidTo() {
+    public LocalDate getValidTo() {
         return validTo;
     }
 
-    public void setValidTo(Date validTo) {
+    public void setValidTo(LocalDate validTo) {
         this.validTo = validTo;
     }
 
