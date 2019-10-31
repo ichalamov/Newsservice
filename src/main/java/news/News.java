@@ -1,6 +1,7 @@
 package news;
 
 import java.util.Date;
+import java.util.List;
 
 public class News {
 
@@ -11,14 +12,15 @@ public class News {
     private String linkToPicture;
     private Date validFrom;
     private Date validTo;
-    private int unOrAllowedRole;
+    private List<Integer> readStatus;
 
-    public News(int id, String title, String text, Date creationDate, String linkToPicture) {
+    public News(int id, String title, String text, Date creationDate, String linkToPicture, List<Integer> readStatus) {
         this.id = id;
         this.title = title;
         this.text = text;
         this.creationDate = creationDate;
         this.linkToPicture = linkToPicture;
+        this.readStatus = readStatus;
     }
 
     public int getId() {
@@ -57,4 +59,31 @@ public class News {
         this.linkToPicture = linkToPicture;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getValidFrom() {
+        return validFrom;
+    }
+
+    public void setValidFrom(Date validFrom) {
+        this.validFrom = validFrom;
+    }
+
+    public Date getValidTo() {
+        return validTo;
+    }
+
+    public void setValidTo(Date validTo) {
+        this.validTo = validTo;
+    }
+
+    public List<Integer> getReadStatus() {
+        return readStatus;
+    }
+
+    public void setReadStatus(List<Integer> readStatus) {
+        this.readStatus = readStatus;
+    }
 }

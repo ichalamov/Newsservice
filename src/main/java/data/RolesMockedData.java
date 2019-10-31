@@ -1,7 +1,9 @@
-package news;
+package data;
+
+import news.Privilege;
+import news.Role;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class RolesMockedData {
@@ -58,6 +60,38 @@ public class RolesMockedData {
             }
         }
         return null;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
+
+    public List<Privilege> getAdminPrivileges() {
+        return adminPrivileges;
+    }
+
+    public void setAdminPrivileges(List<Privilege> adminPrivileges) {
+        this.adminPrivileges = adminPrivileges;
+    }
+
+    public List<Privilege> getReaderPrivileges() {
+        return readerPrivileges;
+    }
+
+    public void setReaderPrivileges(List<Privilege> readerPrivileges) {
+        this.readerPrivileges = readerPrivileges;
+    }
+
+    public List<Privilege> getPublisherPrivileges() {
+        return publisherPrivileges;
+    }
+
+    public void setPublisherPrivileges(List<Privilege> publisherPrivileges) {
+        this.publisherPrivileges = publisherPrivileges;
     }
 
 }

@@ -5,13 +5,15 @@ import java.util.Collection;
 public class User {
 
     private int id;
+    private String username;
     private String firstName;
     private String lastName;
     private String email;
     private Role role;
 
-    public User(int id, String firstName, String lastName, String email, Role role) {
+    public User(int id, String username, String firstName, String lastName, String email, Role role) {
         this.id = id;
+        this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -24,6 +26,14 @@ public class User {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getFirstName() {

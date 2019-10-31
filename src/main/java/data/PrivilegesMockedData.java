@@ -1,4 +1,6 @@
-package news;
+package data;
+
+import news.Privilege;
 
 import java.util.ArrayList;
 import java.util.List;
