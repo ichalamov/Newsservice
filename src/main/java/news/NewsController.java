@@ -168,6 +168,19 @@ public class NewsController {
         }
     }
 
+    // Deletes a Role, only ADMIN is allowed to
+    @DeleteMapping("permittedRoles/{roleId}")
+    public String deleteRole(@PathVariable String roleId){
+        if (isAuthorized(getCurrentUsername(), new ArrayList<String>(Arrays.asList("ADMIN")))) {
+
+            int role = Integer.parseInt(roleId);
+            return roles.delete(role);
+        }   else{
+            throw new ResponseStatusException(
+                    HttpStatus.UNAUTHORIZED, "This user is not authorized. Check your credentials.");
+        }
+    }
+
 
     // get the username of the user who sent request to the API
     private String getCurrentUsername(){

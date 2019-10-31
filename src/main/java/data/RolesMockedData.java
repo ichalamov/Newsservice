@@ -1,5 +1,6 @@
 package data;
 
+import news.News;
 import news.Privilege;
 import news.Role;
 
@@ -94,4 +95,18 @@ public class RolesMockedData {
         this.publisherPrivileges = publisherPrivileges;
     }
 
+    // delete role by id
+    public String delete(int id) {
+        int roleIndex = -1;
+        for (Role r : roles) {
+            if (r.getId() == id) {
+                roleIndex = roles.indexOf(r);
+                continue;
+            }
+        }
+        if (roleIndex > -1) {
+            roles.remove(roleIndex);
+        }
+        return "Role deleted succesfully.";
+    }
 }
